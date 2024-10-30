@@ -3,46 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gusza110811's website</title>
+    <title>Document</title>
 </head>
-<body style="background-color: black">
-    <div id="main" style="color:white">
+<body style="background-color:black;">
+    <div style="color:white">
+        <h1>Gusza110811's personal website</h1>
+        <h3>Main page</h3>
 
-        <h1>Gusza110811's personal website</h>
-        <h2>Usage</h2>
-        <p>For general use and letting people know about me</p><br>
+        <h2>Other pages</h2>
+        <a href="landing.html">Welcome page</a> <br>
 
-        <h2>What happens here?</h2>
-        <p>Anything that i want, i will make websites and cool stuff within this</p><br>
-
-        <h2>So what?</h2>
-        <p>Share this website now lol</p><br>
-
+        <h2>Other projects</h2>
+        <a href="https://github.com/gusza110811/Eterreem-Simulator">One of my first open-sourced game, Eterreem-Simulator</a><br>
+        <a href="https://github.com/gusza110811/Crypto-Simulator">Rebuild of above game, incomplete, be sure to contribute</a>
+        <br>
+        <br>
+        
         <h2>Contact me</h2>
         <a href="https://discord.gg/VeYTu2HzHy">My discord server</a>
-        auguz1108@gmail.com <br><br>
-
-        <button type="button" onclick="darkmodetoggle(0)">switch to dark mode</button> <button type="button" onclick="darkmodetoggle(1)">switch to white mode</button>
+        auguz1108@gmail.com
 
     </div>
 
     <div id="scripts">
         <script>
-            function darkmodetoggle(mode)
-            {
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for(let i = 0; i <ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+        </script>
+        <script>
+            skipcheck = true
+            if (!skipcheck){
 
-                if (mode == 0)
+                if (getCookie("visited") != "true")
                 {
-                    document.querySelector('#main').style = 'color:white';
-                    document.body.style = 'background-color:black';
-                } else
-                {
-                    document.querySelector('#main').style = 'color:black';
-                    document.body.style = 'background-color:white';
+                    window.location.href = "landing.html"
+                    document.cookie = "visited=true"
                 }
             }
         </script>
     </div>
-
 </body>
 </html>
