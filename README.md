@@ -9,7 +9,7 @@ Anything that i want, i will make websites and cool stuff within this
 
 ## So what?
 Share this website now lol
-
-
-
--# also uh dm me on discord @_gusza if you need anything
+-
+-
+-
+# also uh dm me on discord @_gusza if you need anything
