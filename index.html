@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page - Gusza110811's Website</title>
+    <title>Gusza110811's Website</title>
+    <style>
+        a:link {
+            color:aquamarine;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color:blueviolet;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .button {
+            background-color: rgb(0, 0, 22);
+            color:azure;
+        }
+    </style>
 </head>
 <body style="background-color:black;">
     <div style="color:white">
         <h1>Gusza110811's personal website</h1>
         <h3>Main page</h3>
 
-        <h2>Other pages</h2>
-        <a href="landing.html">Welcome page</a> <br>
+        <button onclick="document.location.href='landing.html'" class="button">Visit the Welcome Page</button> <br>
 
         <h2>Other projects</h2>
-        <a href="https://github.com/gusza110811/Eterreem-Simulator">One of my first open-sourced game, Eterreem-Simulator</a><br>
+        <a href="https://github.com/gusza110811/Eterreem-Simulator">My first open-sourced game, Eterreem-Simulator</a><br>
         <a href="https://github.com/gusza110811/Crypto-Simulator">Rebuild of above game, incomplete, be sure to contribute</a>
         <br>
         <br>
         
         <h2>Contact me</h2>
-        <a href="https://discord.gg/VeYTu2HzHy">My discord server</a>
-        auguz1108@gmail.com
+        <a href="https://discord.gg/VeYTu2HzHy"><img src="discord.png" alt="discord" style="width:1in;height:1in;"></a>
+        <a href="mailto:auguz1108@gmail.com"><img src="gmail.png" alt="gmail" style="width:1in;height:1in;"></a>
 
     </div>
 
     <div id="scripts">
-        <script>
-            function getCookie(cname) {
-                let name = cname + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(';');
-                for(let i = 0; i <ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-        </script>
+        <script src="scripts.js"></script>
         <script>
             skipcheck = false
             if (!skipcheck){
