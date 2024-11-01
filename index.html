@@ -11,7 +11,7 @@
         <h1>Gusza110811's personal website</h1>
         <h3>Main page</h3>
 
-        <button onclick="document.location.href='landing.html'">Visit the Welcome Page</button>
+        <button onclick="document.location.href='landing.html'">About this site</button>
         <button onclick="document.location.href='https://gusza110811.github.io/Text-gen'">Basic Sentence Generator</button> <br>
 
         <h2>Other projects</h2>
@@ -31,12 +31,7 @@
         <script>
             skipcheck = false
             if (!skipcheck){
-
-                if (getCookie("visited") != "true")
-                {
-                    window.location.href = "landing.html"
-                    document.cookie = "visited=true"
-                }
+                document.cookie = "visited=true"
             }
         </script>
     </div>
