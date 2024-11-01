@@ -15,6 +15,21 @@ button {
     color:azure;
 }
 
+body {
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+
 .centered {
     text-align: center;
+}
+
+.fairfax {
+    font-family: Fairfaxpona;
+}
+
+@font-face {
+    font-family: Fairfaxpona;
+    src: url('FairfaxPonaHD.ttf');
 }
