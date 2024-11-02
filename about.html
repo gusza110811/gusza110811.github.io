@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="centered">
-        <button style="position: fixed; right: 0; bottom: 0">Toggle Sitelen Pona</button>
+        <button style="position: fixed; right: 1cm; bottom: 1cm" onclick="togglefairfaxpona()">Toggle Sitelen Pona</button>
+        <button style="position: fixed; left: 10px; top: 10px" onclick="document.location.href='https://gusza110811.github.io'">Return to home</button>
         <h1>About me</h1>
         <h4>The author of this site</h3>
-        <h2>Biography</h2>
+        <img src="the_tree_32x32.png" alt="pixel art of a tree">
+        
         <p>
             Straight male, Any pronouns i do not care <br>
             I am a human (of course), i use this tree as a mascot for my internet personality <br>
@@ -23,17 +25,27 @@
         </p>
 
         
-        <p class="fairfax">
-            mije pi olin meli, kasi/jan <br>
-            mi jan {ni li lon mute}, sitelen pi kasi li sitelen pi mi lon linluwi
+        <p class="fairfax" id="tokipona">
+            mije pi olin meli, kasi/jan. <br>
+            mi jan, sitelen pi kasi li sitelen pi mi lon linluwi. <br>
+            mi lon ma [TAWI], mi ken toki kepeken toki [TAWI] kepeken toki [INLI]. <br>
+            mi kama sona e toki-pona. mi ken toki mute kepeken toki-pona. <br>
         </p>
+
+
     </div>
 
     <script>
         fairfaxpona = true
 
-        function togglefairfaxpona(params) {
-            
+        function togglefairfaxpona() {
+            if (fairfaxpona) {
+                document.getElementById("tokipona").className = ""
+                fairfaxpona = false
+            } else {
+                document.getElementById("tokipona").className = "fairfax"
+                fairfaxpona = true
+            }
         }
     </script>
 </body>
