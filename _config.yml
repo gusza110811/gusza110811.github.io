@@ -3,3 +3,5 @@ include:
 
 exclude:
   - README.md
+
+permalink: /:title/
