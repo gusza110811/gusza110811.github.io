@@ -8,4 +8,4 @@ For general use and letting people know about me.
 Anything that i want, i will make websites and cool stuff within this.
 
 ## So what now?
-Check the website [here](https://gusza110811.github.io) i guess.
+Check the website [here](https://gusza.xyz) i guess.
