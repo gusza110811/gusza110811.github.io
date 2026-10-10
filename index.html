@@ -8,34 +8,116 @@
 </head>
 <body style="background-color:black;">
     <div style="color:white" class="centered">
-        <h1>Gusza's personal website</h1>
-        <h3>Main page</h3>
 
-        <a href="landing.html" class="button">About this site</a> <a href='me.html' class="button">About the author</a> <br>
-        <a href='https://gusza110811.github.io/Text-gen' class="button">Basic Sentence Generator</a> <a href='https://gusza110811.github.io/Useless-site' class="button">Very Random stuff coming to this page</a> <br> 
+        <div style="display: flex; align-items: center; gap: 40px; justify-content: center;">
+            <img src="the_tree.png" alt="pixel art of a tree" style="height: auto; border-radius: 100%;">
+            <div>
+                <h3>Gusza</h2>
+                <h4>He/They</h4>
+                <h4>UTC+7</h4>
+                <p id="quote" style="width: 2in;"></p>
+            </div>
+        </div>
+
+        <p>Thai boy<sup>[citation needed]</sup> coding and gaming in your area.</p>
+        <p>The name's pronounced /&#x2C8;&#x261;&#x28C;&#x73;&#x2E;&#x7A;&#x61;/ in English and /&#x6B;&#x61;&#x74;&#x31A;&#x2E;&#x73;&#x61;&#x302;/ in Thai</p>
+        <p>My 16P is <b>INxP</b>, though really I'm pretty average in all dimensions</p>
+        <p>Speaks Thai and English, attempting to learn Latin and Japanese</p>
+
+        <a href="landing.html" class="button">About this site</a>
+
+        <a href="https://gusza110811.github.io/projects" class="button">Projects</a>
         
-        <br>
-
-        <h2>Projects</h2>
-        <a href="https://github.com/gusza110811/gChat" target="_blank">Simple text chat protocol</a><br>
-        <a href="https://github.com/gusza110811/gex" target="_blank">Silly CLI text editor</a><br>
-        <a href="https://github.com/gusza110811/miniArch" target="_blank">8086-like Instruction Set Architecture</a><br>
-        <a href="https://github.com/gusza110811/Controller-keyboard" target="_blank">Type with your controller</a><br>
-        <a href="https://gusza110811.github.io/projects" class="button">See More</a>
-        <br>
+        <br><br>
         
-        <h2>Contact me</h2>
-        <a href="https://discord.gg/rH5ttNDn9s" target="_blank"><img src="Discord-Symbol-Blurple.png" alt="discord" style="height: 0.5in;"></a>
-    </div>
-
-    <div id="scripts">
-        <script src="scripts.js"></script>
-        <script>
-            skipcheck = false
-            if (!skipcheck){
-                document.cookie = "visited=true"
-            }
-        </script>
+        <h3>
+            <a href="https://discord.com/users/779714651767963648" target="_blank" class="button">Discord</a>
+            <a href="mailto:auguz1108@gmail.com" target="_blank" class="button">Mail</a>
+            <br>
+            <a href="https://steamcommunity.com/id/_gusza/" target="_blank" class="button">Steam</a>
+            <a href="https://osu.ppy.sh/users/36858419" target="_blank" class="button">Osu!</a>
+            <br>
+            <a href="https://github.com/gusza110811" target="_blank" class="button">Github</a>
+            <a href="https://www.youtube.com/@_Gusza" target="_blank", class="button">Youtube</a>
+            <br>
+            <a href="https://www.reddit.com/user/tree_cell/" target="_blank" class="button">Reddit</a>
+            <a href="https://x.com/gusza1108" target="_blank" class="button">Twitter</a>
+            <a href="https://bsky.app/profile/gusza.fyi" target="_blank" class="button">Bluesky</a>
+        </h3>
     </div>
 </body>
+
+<script>
+    function message() {
+        const messages = [
+            "The quick brown fox jumps over the lazy dog.",
+            "To be or not to be, that is the question.",
+            "May the Force be with you.",
+            "All your base are belong to us.",
+            "Life is like a box of chocolates.",
+            "I think, therefore I am.",
+            "Houston, we have a problem.",
+            "It was the best of times, it was the worst of times.",
+            "Keep calm and carry on.",
+            "Do or do not, there is no try.",
+            "I'm the king of the world!",
+            "Why so serious?",
+            "One does not simply walk into Mordor.",
+            "42 is the answer to life, the universe, and everything.",
+            "In space, no one can hear you scream.",
+            "Open the pod bay doors, HAL.",
+            "I am Groot.",
+            "With great power comes great responsibility.",
+            "The cake is a lie.",
+            "All work and no play makes Jack a dull boy.",
+            "Frankly, my dear, I don't give a damn.",
+            "You can't handle the truth!",
+            "Toto, I've a feeling we're not in Kansas anymore.",
+            "Say hello to my little friend!",
+            "I'll be back.",
+            "Shaken, not stirred.",
+            "Nobody puts Baby in a corner.",
+            "What we've got here is failure to communicate.",
+            "I have two Microsoft Outlooks and neither one of those are working.",
+            "I am become death, the destroyer of worlds.",
+            "Failure to Comply does not mean Compliance to Fail.",
+            "I like trains.",
+            "Open source and such.",
+            "Chainsaw man's ending definitely wasn't rushed.",
+            "Am I closeted? Who knows.",
+            "Try viewing the site with numeric hash.",
+            "Debian's the best distro fr."
+        ];
+
+        const messages_fixed = [
+            "I like crossdressing btw.",
+            "If you're using inspect I'll inspect your lungs with my naked eye.",
+            "Am I a femboy? Who knows.",
+            "Why am i spilling beans all over an open source repository?",
+            "[#3], because nobody even check the source.",
+            "If you're reading this, mail me at auguz1108@gmail.com",
+            "You know, this could be implemented with PHP.",
+            "[#6], Github Pages doesn't support PHP though.",
+            "This is the last one",
+            "I see you're trying something.",
+        ]
+
+        const hash = window.location.hash.slice(1)
+
+        let hash_n = Number(hash);
+
+        if (hash_n > messages_fixed.length-2) {
+            hash_n = messages_fixed.length-1
+        }
+
+        if ((hash_n != NaN) & (hash != "")) {
+            document.getElementById("quote").innerHTML = '"' + messages_fixed[hash_n] + '"';
+        } else {
+            document.getElementById("quote").innerHTML = '"' + messages[Math.floor(Math.random() * messages.length)] + '"';
+        }
+    }
+
+    message()
+</script>
+
 </html>
