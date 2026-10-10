@@ -114,25 +114,31 @@
         }
     }
 
-    const hash = window.location.hash.slice(1)
+    function handle_hash() {
+        const hash = window.location.hash.slice(1)
 
-    let type = hash.slice(0,1).toLowerCase()
-    let val = hash.slice(1)
+        let type = hash.slice(0,1).toLowerCase()
+        let val = hash.slice(1)
 
-    let val_n = Number(val);
+        let val_n = Number(val);
 
-    let fixed_msg_id = NaN
+        let fixed_msg_id = NaN
 
-    if (type == "m") {
-        fixed_msg_id = val_n
+        if (type == "m") {
+            fixed_msg_id = val_n
+            message(fixed_msg_id)
+        }
+
+        if (type == "c") {
+            let body = document.getElementById("motherland")
+            body.style.backgroundColor = val
+        }
     }
 
-    if (type == "c") {
-        let body = document.getElementById("motherland")
-        body.style.backgroundColor = val
-    }
+    window.addEventListener('hashchange', handle_hash)
 
-    message(fixed_msg_id)
+    message(NaN)
+    handle_hash()
 </script>
 
 </html>
