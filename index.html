@@ -6,49 +6,48 @@
     <title>Gusza's Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:black;">
-    <div style="color:white" class="centered">
+<body id="motherland">
+    <div style="max-width: 400px;">
 
-        <div style="display: flex; align-items: center; gap: 40px; justify-content: center;">
+        <div style="display: flex; align-items: center; justify-content: center;">
             <img src="the_tree.png" alt="pixel art of a tree" style="height: auto; border-radius: 100%;">
             <div>
                 <h3>Gusza</h2>
                 <h4>He/They</h4>
                 <h4>UTC+7</h4>
-                <p id="quote" style="width: 2in;"></p>
+                <p id="quote" style="width: 2in;">Javascript's not my thing, says you</p>
             </div>
         </div>
 
         <p>Thai boy<sup>[citation needed]</sup> coding and gaming in your area.</p>
         <p>The name's pronounced /&#x2C8;&#x261;&#x28C;&#x73;&#x2E;&#x7A;&#x61;/ in English and /&#x6B;&#x61;&#x74;&#x31A;&#x2E;&#x73;&#x61;&#x302;/ in Thai</p>
-        <p>My 16P is <b>INxP</b>, though really I'm pretty average in all dimensions</p>
+        <p>My 16P is <b>INFP</b>, though really I'm pretty average in all dimensions</p>
         <p>Speaks Thai and English, attempting to learn Latin and Japanese</p>
-
+        
+        <hr>
         <a href="landing.html" class="button">About this site</a>
 
         <a href="https://gusza110811.github.io/projects" class="button">Projects</a>
-        
+
         <br><br>
-        
-        <h3>
-            <a href="https://discord.com/users/779714651767963648" target="_blank" class="button">Discord</a>
-            <a href="mailto:auguz1108@gmail.com" target="_blank" class="button">Mail</a>
-            <br>
-            <a href="https://steamcommunity.com/id/_gusza/" target="_blank" class="button">Steam</a>
-            <a href="https://osu.ppy.sh/users/36858419" target="_blank" class="button">Osu!</a>
-            <br>
-            <a href="https://github.com/gusza110811" target="_blank" class="button">Github</a>
-            <a href="https://www.youtube.com/@_Gusza" target="_blank", class="button">Youtube</a>
-            <br>
-            <a href="https://www.reddit.com/user/tree_cell/" target="_blank" class="button">Reddit</a>
-            <a href="https://x.com/gusza1108" target="_blank" class="button">Twitter</a>
-            <a href="https://bsky.app/profile/gusza.fyi" target="_blank" class="button">Bluesky</a>
-        </h3>
+
+        <a href="https://discord.com/users/779714651767963648" target="_blank" class="button">Discord</a>
+        <a href="mailto:auguz1108@gmail.com" target="_blank" class="button">Mail</a>
+        <br>
+        <a href="https://steamcommunity.com/id/_gusza/" target="_blank" class="button">Steam</a>
+        <a href="https://osu.ppy.sh/users/36858419" target="_blank" class="button">Osu!</a>
+        <br>
+        <a href="https://github.com/gusza110811" target="_blank" class="button">Github</a>
+        <a href="https://www.youtube.com/@_Gusza" target="_blank", class="button">Youtube</a>
+        <br>
+        <a href="https://www.reddit.com/user/tree_cell/" target="_blank" class="button">Reddit</a>
+        <a href="https://x.com/gusza1108" target="_blank" class="button">Twitter</a>
+        <a href="https://bsky.app/profile/gusza.fyi" target="_blank" class="button">Bluesky</a>
     </div>
 </body>
 
 <script>
-    function message() {
+    function message(fixed_message) {
         const messages = [
             "The quick brown fox jumps over the lazy dog.",
             "To be or not to be, that is the question.",
@@ -80,13 +79,15 @@
             "What we've got here is failure to communicate.",
             "I have two Microsoft Outlooks and neither one of those are working.",
             "I am become death, the destroyer of worlds.",
+            "Themes and such.",
             "Failure to Comply does not mean Compliance to Fail.",
             "I like trains.",
             "Open source and such.",
             "Chainsaw man's ending definitely wasn't rushed.",
-            "Am I closeted? Who knows.",
-            "Try viewing the site with numeric hash.",
-            "Debian's the best distro fr."
+            "Am I closeted?.",
+            "Try viewing the site with #m9",
+            "Try viewing the site with #c#F0F0F0",
+            "Debian's the best distro.",
         ];
 
         const messages_fixed = [
@@ -99,25 +100,39 @@
             "You know, this could be implemented with PHP.",
             "[#6], Github Pages doesn't support PHP though.",
             "This is the last one",
+            "You saw the message didn't you.",
             "I see you're trying something.",
         ]
 
-        const hash = window.location.hash.slice(1)
-
-        let hash_n = Number(hash);
-
-        if (hash_n > messages_fixed.length-2) {
-            hash_n = messages_fixed.length-1
-        }
-
-        if ((hash_n != NaN) & (hash != "")) {
-            document.getElementById("quote").innerHTML = '"' + messages_fixed[hash_n] + '"';
+        if (!Number.isNaN(fixed_message)) {
+            if (fixed_message > messages_fixed.length-2) {
+                fixed_message = messages_fixed.length-1
+            }
+            document.getElementById("quote").innerHTML = '"' + messages_fixed[fixed_message] + '"';
         } else {
             document.getElementById("quote").innerHTML = '"' + messages[Math.floor(Math.random() * messages.length)] + '"';
         }
     }
 
-    message()
+    const hash = window.location.hash.slice(1)
+
+    let type = hash.slice(0,1).toLowerCase()
+    let val = hash.slice(1)
+
+    let val_n = Number(val);
+
+    let fixed_msg_id = NaN
+
+    if (type == "m") {
+        fixed_msg_id = val_n
+    }
+
+    if (type == "c") {
+        let body = document.getElementById("motherland")
+        body.style.backgroundColor = val
+    }
+
+    message(fixed_msg_id)
 </script>
 
 </html>
