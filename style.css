@@ -16,21 +16,20 @@ button {
 }
 
 html {
+    position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    overflow: hidden;
     background-color: #111111;
 }
 
 html::before {
-    animation: hueCycle 20s infinite linear;
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(30deg, #331111, #113311, #111133);
-    animation: hueShift 20s ease infinite;
+    animation: hueShift 20s linear infinite;
     z-index: -2;
 }
 
@@ -112,4 +111,10 @@ a:visited.button {
     color:azure;
     background-color: transparent;
     text-decoration: none;
+}
+
+a:hover.button {
+    color: azure;
+    background-color: transparent;
+    font-weight: bold;
 }
